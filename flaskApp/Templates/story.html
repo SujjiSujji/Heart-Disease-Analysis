@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Story - Heart Disease Analysis{% endblock %}
+
+{% block content %}
+<section class="story-section">
+    <div class="container">
+        <div class="page-header">
+            <span class="page-label">STORY</span>
+            <h1 class="page-title">{{ story.title }}</h1>
+            <p class="page-subtitle">Follow the narrative journey through our heart disease data analysis.</p>
+        </div>
+
+        <div class="story-embed">
+            <iframe src="{{ story.url }}" width="100%" height="800" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="story-info">
+            <div class="info-card">
+                <h3>📖 About This Story</h3>
+                <p>This interactive story guides you through key insights about heart disease, including:</p>
+                <ul>
+                    <li>Gender distribution of heart disease cases</li>
+                    <li>Effect of physical activity on heart health</li>
+                    <li>Relationship between diabetes and heart disease</li>
+                    <li>Impact of smoking and alcohol consumption</li>
+                    <li>Diversity-wise heart disease count analysis</li>
+                    <li>Age and BMI correlations</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

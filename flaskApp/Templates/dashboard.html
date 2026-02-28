@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Heart Disease Analysis{% endblock %}
+
+{% block content %}
+<section class="dashboard-section">
+    <div class="container">
+        <div class="page-header">
+            <span class="page-label">DASHBOARD</span>
+            <h1 class="page-title">Interactive Dashboards</h1>
+        </div>
+
+        <div class="dashboard-container">
+            <div class="dashboard-embed" id="dashboard-embed">
+                {% for db in dashboards %}
+                <div class="dashboard-slide {% if loop.first %}active{% endif %}" data-dashboard="{{ db.id }}">
+                    <iframe src="{{ db.url }}" width="100%" height="700" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="dashboard-nav">
+                <button class="btn btn-nav" id="prev-btn" onclick="changeDashboard(-1)" disabled>
+                    <span>←</span> Previous
+                </button>
+                <div class="dashboard-indicators">
+                    {% for db in dashboards %}
+                    <span class="indicator {% if loop.first %}active{% endif %}" data-index="{{ loop.index0 }}"></span>
+                    {% endfor %}
+                </div>
+                <button class="btn btn-nav btn-primary" id="next-btn" onclick="changeDashboard(1)">
+                    Next <span>→</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="dashboard-legend">
+            <h3>Legend</h3>
+            <div class="legend-grid">
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #4169E1;"></span>
+                    <span>Heart Disease: No</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #FFA500;"></span>
+                    <span>Heart Disease: Yes</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #6B7280;"></span>
+                    <span>Diabetic: No</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #EF4444;"></span>
+                    <span>Diabetic: Yes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

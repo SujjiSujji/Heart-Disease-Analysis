@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}About - Heart Disease Analysis{% endblock %}
+
+{% block content %}
+<section class="about-hero">
+    <div class="container about-container">
+        <div class="about-content">
+            <h1 class="page-title">About Heart Disease</h1>
+
+            <div class="about-text">
+                <p>Heart disease (heart disease) is a group of diseases related to cardiovascular diseases, manifested
+                    by a violation of the normal functioning of the heart. May be caused by damage to the epicardium,
+                    pericardium, myocardium, endocardium, valvular apparatus of the heart, heart vessels.</p>
+
+                <p>According to the National Heart, Lung and Blood Institute in Framingham (USA), the most important
+                    factors in the development of cardiovascular disease in humans are <strong>obesity</strong>,
+                    <strong>sedentary lifestyle</strong> and <strong>smoking</strong>.
+                </p>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat-item">
+                    <span class="stat-number">17.9M</span>
+                    <span class="stat-label">Deaths per year globally</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">#1</span>
+                    <span class="stat-label">Cause of death worldwide</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">80%</span>
+                    <span class="stat-label">Preventable cases</span>
+                </div>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="{{ url_for('static', filename='images/about-heart.svg') }}" alt="Heart Health">
+        </div>
+    </div>
+</section>
+
+<section class="risk-factors">
+    <div class="container">
+        <h2 class="section-title">Key Risk Factors</h2>
+        <div class="factors-grid">
+            <div class="factor-card">
+                <div class="factor-icon">🍔</div>
+                <h3>Obesity</h3>
+                <p>Excess weight puts extra strain on the heart and increases risk of heart disease.</p>
+            </div>
+            <div class="factor-card">
+                <div class="factor-icon">🛋️</div>
+                <h3>Sedentary Lifestyle</h3>
+                <p>Lack of physical activity weakens the heart muscle and contributes to weight gain.</p>
+            </div>
+            <div class="factor-card">
+                <div class="factor-icon">🚬</div>
+                <h3>Smoking</h3>
+                <p>Tobacco use damages blood vessels and significantly increases heart disease risk.</p>
+            </div>
+            <div class="factor-card">
+                <div class="factor-icon">🍷</div>
+                <h3>Alcohol</h3>
+                <p>Excessive alcohol consumption can lead to high blood pressure and heart failure.</p>
+            </div>
+            <div class="factor-card">
+                <div class="factor-icon">🩺</div>
+                <h3>Diabetes</h3>
+                <p>High blood sugar levels damage blood vessels and increase cardiovascular risk.</p>
+            </div>
+            <div class="factor-card">
+                <div class="factor-icon">😰</div>
+                <h3>Stress</h3>
+                <p>Chronic stress can contribute to high blood pressure and unhealthy coping behaviors.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

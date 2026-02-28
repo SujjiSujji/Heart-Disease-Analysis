@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Heart Disease Analysis - Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">Heart Disease Analysis</h1>
+            <p class="hero-subtitle">Explore interactive visualizations and insights about cardiovascular health using
+                advanced data analytics and Tableau dashboards.</p>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg">
+                Get Started
+                <span class="btn-arrow">→</span>
+            </a>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/hero-illustration.svg') }}"
+                alt="Data Analysis Illustration">
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Explore Our Analysis</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>10+ Visualizations</h3>
+                <p>Explore detailed charts analyzing various factors affecting heart disease.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Interactive Dashboards</h3>
+                <p>Filter and drill down into the data with our interactive Tableau dashboards.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Data Story</h3>
+                <p>Follow a guided narrative through the key insights and findings.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

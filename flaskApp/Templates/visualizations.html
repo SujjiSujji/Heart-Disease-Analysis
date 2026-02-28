@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Visualizations - Heart Disease Analysis{% endblock %}
+
+{% block content %}
+<section class="visualizations-section">
+    <div class="container">
+        <div class="page-header">
+            <span class="page-label">VISUALIZATIONS</span>
+            <h1 class="page-title">All Visualizations</h1>
+            <p class="page-subtitle">Explore all 10 unique Tableau visualizations analyzing different aspects of heart
+                disease data.</p>
+        </div>
+
+        <div class="viz-grid">
+            {% for viz in visualizations %}
+            <div class="viz-card" data-viz-id="{{ viz.id }}">
+                <div class="viz-header">
+                    <span class="viz-number">{{ viz.id }}</span>
+                    <h3 class="viz-title">{{ viz.title }}</h3>
+                </div>
+                <div class="viz-embed">
+                    <iframe src="{{ viz.url }}" width="100%" height="400" frameborder="0" loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <button class="btn btn-secondary btn-fullscreen" onclick="toggleFullscreen(this)">
+                    <span>⛶</span> Expand
+                </button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Fullscreen Modal -->
+<div id="fullscreen-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div class="modal-body">
+            <iframe id="modal-iframe" src="" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}
