@@ -1,0 +1,96 @@
+<svg width="450" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0F9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F2FE;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="heartGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <rect width="450" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- Doctor figure -->
+  <!-- Head -->
+  <circle cx="180" cy="120" r="30" fill="#FFE4C4"/>
+  
+  <!-- White coat -->
+  <rect x="150" y="150" width="60" height="100" rx="8" fill="#FFFFFF"/>
+  <rect x="145" y="160" width="15" height="80" rx="4" fill="#FFFFFF"/>
+  <rect x="210" y="160" width="15" height="80" rx="4" fill="#FFFFFF"/>
+  
+  <!-- Collar -->
+  <polygon points="165,150 180,160 195,150" fill="#4169E1"/>
+  
+  <!-- Stethoscope -->
+  <path d="M 165 170 Q 160 180 160 190 L 160 210" stroke="#4169E1" stroke-width="3" fill="none"/>
+  <circle cx="160" cy="215" r="8" fill="#4169E1" opacity="0.6"/>
+  
+  <!-- Hand holding heart -->
+  <ellipse cx="240" cy="200" rx="15" ry="20" fill="#FFE4C4"/>
+  
+  <!-- Heart -->
+  <g transform="translate(280, 180)">
+    <path d="M 0,20 C 0,10 -10,0 -20,0 C -30,0 -35,10 -35,20 C -35,40 0,60 0,60 C 0,60 35,40 35,20 C 35,10 30,0 20,0 C 10,0 0,10 0,20 Z" 
+          fill="url(#heartGlow)"/>
+    
+    <!-- Heart glow effect -->
+    <circle cx="0" cy="20" r="50" fill="#FF6B6B" opacity="0.1"/>
+    <circle cx="0" cy="20" r="40" fill="#FF6B6B" opacity="0.1"/>
+  </g>
+  
+  <!-- Medical icons floating around -->
+  <!-- Heartbeat icon -->
+  <g transform="translate(100, 80)">
+    <polyline points="0,10 5,10 8,0 12,20 15,10 20,10" 
+              stroke="#4169E1" stroke-width="2" fill="none" opacity="0.6"/>
+    <circle cx="10" cy="10" r="15" fill="none" stroke="#4169E1" stroke-width="1.5" opacity="0.3"/>
+  </g>
+  
+  <!-- Plus icon -->
+  <g transform="translate(350, 100)">
+    <rect x="8" y="0" width="4" height="20" rx="2" fill="#4169E1" opacity="0.6"/>
+    <rect x="0" y="8" width="20" height="4" rx="2" fill="#4169E1" opacity="0.6"/>
+    <circle cx="10" cy="10" r="12" fill="none" stroke="#4169E1" stroke-width="1.5" opacity="0.3"/>
+  </g>
+  
+  <!-- Stethoscope icon -->
+  <g transform="translate(120, 280)">
+    <circle cx="0" cy="15" r="5" fill="#6366F1" opacity="0.6"/>
+    <path d="M 0,10 Q -10,0 -15,-10 L -15,-20" stroke="#6366F1" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M 0,10 Q 10,0 15,-10 L 15,-20" stroke="#6366F1" stroke-width="2" fill="none" opacity="0.6"/>
+    <circle cx="-15" cy="-20" r="4" fill="#6366F1" opacity="0.6"/>
+    <circle cx="15" cy="-20" r="4" fill="#6366F1" opacity="0.6"/>
+  </g>
+  
+  <!-- Pills icon -->
+  <g transform="translate(350, 280)">
+    <rect x="0" y="0" width="15" height="8" rx="4" fill="#FFA500" opacity="0.6"/>
+    <rect x="0" y="0" width="7" height="8" fill="#FFA500" opacity="0.8"/>
+    <ellipse cx="25" cy="4" rx="4" ry="6" fill="#4169E1" opacity="0.6"/>
+  </g>
+  
+  <!-- DNA helix icon -->
+  <g transform="translate(80, 200)">
+    <path d="M 0,0 Q 5,10 0,20" stroke="#6366F1" stroke-width="2" fill="none" opacity="0.4"/>
+    <path d="M 10,0 Q 5,10 10,20" stroke="#6366F1" stroke-width="2" fill="none" opacity="0.4"/>
+    <line x1="0" y1="5" x2="10" y2="5" stroke="#6366F1" stroke-width="1" opacity="0.4"/>
+    <line x1="0" y1="15" x2="10" y2="15" stroke="#6366F1" stroke-width="1" opacity="0.4"/>
+  </g>
+  
+  <!-- Activity monitor icon -->
+  <g transform="translate(370, 200)">
+    <rect x="0" y="0" width="30" height="20" rx="2" fill="none" stroke="#4169E1" stroke-width="1.5" opacity="0.4"/>
+    <polyline points="5,10 8,10 10,5 12,15 14,10 17,10" 
+              stroke="#4169E1" stroke-width="1.5" fill="none" opacity="0.6"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="4" fill="#4169E1" opacity="0.2"/>
+  <circle cx="400" cy="350" r="6" fill="#6366F1" opacity="0.2"/>
+  <circle cx="380" cy="50" r="3" fill="#FFA500" opacity="0.2"/>
+  <circle cx="70" cy="350" r="5" fill="#EF4444" opacity="0.2"/>
+</svg>
